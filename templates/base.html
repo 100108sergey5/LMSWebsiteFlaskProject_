@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">.
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- флешки -->
+<!--    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">-->
+    <title>Сайт с заметками по ОБЖ</title>
+    <script>
+        $(function() {
+           $('.flash-message').delay(500).fadeIn('normal', function() {
+              $(this).delay(2500).fadeOut();
+           });
+        });
+    </script>
+    <style>
+        .flash-message {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            display: none;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .error {
+            background-color: #ffcccc;
+            color: #ff0000;
+        }
+        .success {
+            background-color: #ccffcc;
+            color: #008000;
+        }
+        .info {
+            background-color: #ccccff;
+            color: #0000ff;
+        }
+    </style>
+</head>
+<header>
+    <h1>Заметки по основам безопасности жизнедеятельности</h1>
+    <nav>
+        <ul>
+            <a class="header_button" href="{{ url_for('index') }}">Главная</a>
+            {% if user %}
+                <span class="interface-button">Добро пожаловать, {{ user }}!</span>
+                <a class="header_button" href="{{ url_for('logout') }}">Выйти</a>
+            {% else %}
+                <a class="header_button" href="{{ url_for('login') }}">Войти</a>
+                <a class="header_button" href="{{ url_for('register') }}">Зарегистрироваться</a>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+<main>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+
+    {% block content %}{% endblock %}
+</body></main>
+<footer>
+    <div class="goodButtons">
+        <button onclick="contactUs()">Связаться с нами</button>
+        <button onclick="usefulLinks()">Полезные ссылки</button>
+    </div>
+    <p>&copy; 2025 Щеголихин Сергей; Личный Проект: Сайт "Основы безопасности жизнедеятельности"</p>
+</footer>
+</html>

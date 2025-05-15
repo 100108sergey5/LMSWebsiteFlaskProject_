@@ -1,0 +1,264 @@
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+main {
+    padding: 45px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    flex: 1;
+}
+
+section {
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 100px 20px 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+.panko-cat {
+    display: flex;
+    justify-content: center;
+}
+img {
+    max-width: 1000px;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    max-height: 750px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4CAF50;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+footer button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #4CAF50;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+footer button:hover {
+    background-color: #e7e7e7;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.text_img_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Депрекатну позже */
+.text_block {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    font-size: 24px;
+    text-align: left;
+}
+/* Депрекатну позже */
+
+
+.importantAdvice {
+    font-weight: bold;
+}
+
+li {
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #4CAF50;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.header_button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #4CAF50;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.interface-button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #4CAF50;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.footer {
+    position: absolute;
+}
+.reg_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 30% 20px 30%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.reg_input {
+    margin: 25px 25px 0px 25px;
+}
+.reg_submit {
+    background-color: #fff;
+    margin: 25px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.terror-encounter-img {
+    max-height: 600px;
+    max-width: 600px;
+}
+
+/* Блок с природными опасностями hide active */
+.selection_btn1 {
+    color: blue;
+}
+.active_1{
+    font-weight: 900;
+    font-size: 24px;
+    color: black;
+}
+.hide{
+    display: none;
+}
+
+.image{
+    width: 1000px;
+    height: 1000px;
+}
+.image0{
+    max-width: 1500px;
+    border-radius: 5px;
+    max-height: 1000px;
+    background: url("Earthshake.jpg");
+    background-size: cover;
+}
+.image1{
+    max-width: 1500px;
+    border-radius: 5px;
+    max-height: 1000px;
+    background: url("Tsunami.jpg");
+    background-size: cover;
+}
+.image2{
+    max-width: 1500px;
+    border-radius: 5px;
+    max-height: 1000px;
+    background: url("Flood.jpg");
+    background-size: cover;
+}
+.image3{
+    border-radius: 5px;
+    max-height: 1000px;
+    background: url("Nature.jpg");
+    background-size: cover;
+}
+.Natural_Disasters {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: auto;
+}
+.image_selection {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 1000px;
+    width: 1750px;
+}
+.selection {
+    height: auto;
+    width: auto;
+    max-width: 600px;
+    max-height: 1000px;
+}
+.selection_btn {
+    border-left: black 2px solid;
+    margin: 20px;
+    padding: 0px 0px 0px 20px;
+}
+.selection_title {
+    font-size: 32px;
+    margin: 0px 0px 0px 20px;
+}
+.description {
+    margin: 0px 0px 0px 20px;
+    font-size: 32px;
+    max-height: 800px;
+}
+.description_text {
+    height: auto;
+}
+.number {
+    font-size: 48px
+}
+.text_block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.hello_world {
+    display: flex;
+}
+.image-in-text {
+margin: 15px;}

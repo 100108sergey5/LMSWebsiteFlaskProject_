@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section>
+        <div>
+            <h2>Наш контент</h2>
+            <div class="hello_world">
+                <h3>Добро пожаловать на сайт!</h3><img class='image-in-text' src="/static/hello.gif" alt="hello.gif">
+            </div>
+            <p>На этом сайте содержится информация, связанная с Основами Безопасности Жизнедеятельности.
+            На сайте оформлена полная система регистрации пользователей и комментариев, которые сохраняются в site.db на директории instance.</p>
+            <div class="panko-cat"><img src="/static/panko-panko-cat.gif" alt="Приветствующий кот не загрузился."></div>
+            <a href="{{ url_for('article1') }}">Артикль1</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Комментарии</h2>
+
+        {% if user %}
+            <form method="POST" action="{{ url_for('add_comment') }}">
+                <textarea name="content" rows="4" cols="50" placeholder="Оставьте ваш комментарий..." required></textarea><br>
+                <button type="submit">Отправить</button>
+            </form>
+        {% else %}
+            <p><a href="{{ url_for('login') }}">Войдите</a>, чтобы оставить комментарий.</p>
+        {% endif %}
+
+        <div class="comments">
+            {% for comment in comments %}
+                <div class="comment">
+                    <strong>{{ comment.user.username }}</strong>
+                    <p>{{ comment.content }}</p>
+                    <small>{{ comment.id }}</small>
+                    <hr>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

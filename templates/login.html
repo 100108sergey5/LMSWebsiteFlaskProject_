@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="reg_form">
+    <div>
+    <h1>Вход</h1>
+        <hr>
+    </div>
+
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="reg_input">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required><br>
+        </div>
+        <div class="reg_input">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required><br>
+        </div>
+        <button class="reg_submit" type="submit">Войти</button>
+        <hr>
+    </form>
+
+    <p>Нет аккаунта? <a href="{{ url_for('register') }}">Зарегистрируйтесь</a></p></div>
+{% endblock %}
