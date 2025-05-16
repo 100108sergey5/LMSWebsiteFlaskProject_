@@ -93,8 +93,9 @@ h2 {
     flex-direction: row;
     justify-content: center;
 }
-
-/* Депрекатну позже */
+.comment {
+    background: #fff;
+}
 .text_block {
     display: flex;
     flex-direction: column;
@@ -102,7 +103,6 @@ h2 {
     font-size: 24px;
     text-align: left;
 }
-/* Депрекатну позже */
 
 
 .importantAdvice {
@@ -163,7 +163,17 @@ li {
     margin: 25px;
     font-family: 'IBM Plex Sans', sans-serif;
 }
-
+.comment_submit {
+    background-color: #fff;
+    margin: 0 0 25px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.article_list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
 .terror-encounter-img {
     max-height: 600px;
     max-width: 600px;
@@ -171,7 +181,7 @@ li {
 
 /* Блок с природными опасностями hide active */
 .selection_btn1 {
-    color: blue;
+    color: black;
 }
 .active_1{
     font-weight: 900;
@@ -181,7 +191,9 @@ li {
 .hide{
     display: none;
 }
-
+.article_select {
+    margin-bottom: 25px;
+}
 .image{
     width: 1000px;
     height: 1000px;

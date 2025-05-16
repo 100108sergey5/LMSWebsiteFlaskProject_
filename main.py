@@ -3,10 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'key-here'
 app.static_folder = 'static'
-app.config['SECRET_KEY'] = 'your-secret-key-here'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
@@ -114,6 +113,13 @@ def article1():
     comments = Comment.query.all()
 
     return render_template('article1.html', comments=comments, user=session.get('user'))
+
+
+@app.route('/article2')
+def article2():
+    comments = Comment.query.all()
+
+    return render_template('article2.html', comments=comments, user=session.get('user'))
 
 
 if __name__ == '__main__':

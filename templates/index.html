@@ -10,7 +10,8 @@
             <p>На этом сайте содержится информация, связанная с Основами Безопасности Жизнедеятельности.
             На сайте оформлена полная система регистрации пользователей и комментариев, которые сохраняются в site.db на директории instance.</p>
             <div class="panko-cat"><img src="/static/panko-panko-cat.gif" alt="Приветствующий кот не загрузился."></div>
-            <a href="{{ url_for('article1') }}">Артикль1</a>
+            <div class="article_list"><h2>Список статей</h2><a class="article_select" href="{{ url_for('article1') }}">Основные советы в самых распространнёных ситуациях.</a>
+            <a class="article_select" href="{{ url_for('article2') }}">Стихийные бедствия | Действия на природе.</a></div>
         </div>
     </section>
 
@@ -19,8 +20,9 @@
 
         {% if user %}
             <form method="POST" action="{{ url_for('add_comment') }}">
-                <textarea name="content" rows="4" cols="50" placeholder="Оставьте ваш комментарий..." required></textarea><br>
-                <button type="submit">Отправить</button>
+                <textarea name="content" rows="4" cols="50" placeholder="Ваш комментарий..." required></textarea><br>
+                <button class="comment_submit" type="submit">Отправить</button>
+                <hr>
             </form>
         {% else %}
             <p><a href="{{ url_for('login') }}">Войдите</a>, чтобы оставить комментарий.</p>
@@ -31,7 +33,7 @@
                 <div class="comment">
                     <strong>{{ comment.user.username }}</strong>
                     <p>{{ comment.content }}</p>
-                    <small>{{ comment.id }}</small>
+                    <small>№{{ comment.id }}</small>
                     <hr>
                 </div>
             {% endfor %}
